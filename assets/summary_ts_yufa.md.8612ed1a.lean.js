@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as e}from"./app.6cfb11a2.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{"layoutClass":"m-nav-layout","outline":[2,3,4]},"headers":[],"relativePath":"summary/ts/yufa.md"}'),s={name:"summary/ts/yufa.md"};function o(r,n,c,m,u,p){return a(),e("div")}const i=t(s,[["render",o]]);export{f as __pageData,i as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as s,b as a}from"./app.6cfb11a2.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"skill/index.md"}'),n={name:"skill/index.md"},o=a("p",null,"技巧",-1),r=[o];function c(i,d,_,l,p,m){return t(),s("div",null,r)}const x=e(n,[["render",c]]);export{u as __pageData,x as default};
