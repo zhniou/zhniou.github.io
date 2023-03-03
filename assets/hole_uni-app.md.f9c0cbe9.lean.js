@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o,b as a}from"./app.6cfb11a2.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hole/uni-app.md"}'),n={name:"hole/uni-app.md"},s=a("p",null,"hole",-1),r=[s];function c(p,_,i,l,d,u){return t(),o("div",null,r)}const f=e(n,[["render",c]]);export{m as __pageData,f as default};

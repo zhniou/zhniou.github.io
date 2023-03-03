@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o,b as a}from"./app.6cfb11a2.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hole/index.md"}'),n={name:"hole/index.md"},s=a("p",null,"hole",-1),r=[s];function c(d,_,i,l,p,h){return t(),o("div",null,r)}const u=e(n,[["render",c]]);export{f as __pageData,u as default};
