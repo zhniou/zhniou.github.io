@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>跟着鱼香ros学ros第一弹！ - zhniou</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="zhniou"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="zhniou"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="跟着鱼香ros学ros"><meta property="og:type" content="blog"><meta property="og:title" content="跟着鱼香ros学ros第一弹！"><meta property="og:url" content="https://zhniou.github.io/2025/09/20/ros/1.%E8%B7%9F%E7%9D%80%E9%B1%BC%E9%A6%99ros%E5%AD%A6ros/"><meta property="og:site_name" content="zhniou"><meta property="og:description" content="跟着鱼香ros学ros"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zhniou.github.io/img/ros/1/image-20250512170610527.png"><meta property="article:published_time" content="2025-09-20T15:44:27.000Z"><meta property="article:modified_time" content="2026-01-12T03:44:02.713Z"><meta property="article:author" content="zhouxf"><meta property="article:tag" content="ros"><meta property="article:tag" content="python"><meta property="article:tag" content="linux"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://zhniou.github.io/img/ros/1/image-20250512170610527.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhniou.github.io/2025/09/20/ros/1.%E8%B7%9F%E7%9D%80%E9%B1%BC%E9%A6%99ros%E5%AD%A6ros/"},"headline":"跟着鱼香ros学ros第一弹！","image":["https://zhniou.github.io/img/ros/1/image-20250512170610527.png"],"datePublished":"2025-09-20T15:44:27.000Z","dateModified":"2026-01-12T03:44:02.713Z","author":{"@type":"Person","name":"zhouxf"},"publisher":{"@type":"Organization","name":"zhniou","logo":{"@type":"ImageObject","url":"https://zhniou.github.io/img/favicon.svg"}},"description":"跟着鱼香ros学ros"}</script><link rel="canonical" href="https://zhniou.github.io/2025/09/20/ros/1.%E8%B7%9F%E7%9D%80%E9%B1%BC%E9%A6%99ros%E5%AD%A6ros/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.svg" alt="zhniou" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">档案室</a><a class="navbar-item" href="/categories">类别</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/img/ros/1/image-20250512170610527.png" alt="跟着鱼香ros学ros第一弹！"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-09-20T15:44:27.000Z" title="9/20/2025, 3:44:27 PM">2025-09-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E8%B7%9F%E7%9D%80%E9%B1%BC%E9%A6%99ros%E5%AD%A6ros/">跟着鱼香ros学ros</a><span> / </span><a class="link-muted" href="/categories/%E8%B7%9F%E7%9D%80%E9%B1%BC%E9%A6%99ros%E5%AD%A6ros/%E7%AC%AC%E4%B8%80%E5%BC%B9-%E5%90%AF%E7%A8%8B%E5%92%8C%E8%8A%82%E7%82%B9%EF%BC%81/">第一弹 启程和节点！</a></span><span class="level-item">6 分钟读完 (大约854个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">跟着鱼香ros学ros第一弹！</h1><div class="content"><h1 id="1-1-Linux终端基础操作"><a href="#1-1-Linux终端基础操作" class="headerlink" title="1.1 Linux终端基础操作"></a>1.1 Linux终端基础操作</h1><table>
+<thead>
+<tr>
+<th>pwd</th>
+<th>查看当前终端默认主目录</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mkdir</td>
+<td>创建文件夹</td>
+</tr>
+<tr>
+<td>touch</td>
+<td>创建文件</td>
+</tr>
+<tr>
+<td>nano</td>
+<td>编辑文件</td>
+</tr>
+<tr>
+<td>ctrl</td>
+<td>对应的命令使用下方的功能</td>
+</tr>
+<tr>
+<td>cat</td>
+<td>查看文件内容</td>
+</tr>
+<tr>
+<td>rm –help</td>
+<td>查看命令使用方法</td>
+</tr>
+<tr>
+<td>rm&#x2F;rm -rf ….</td>
+<td>删除文件&#x2F;递归强制删除根目录下所有文件</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>移动文件 如： mv demo_python_pkg&#x2F; chapt2_ws&#x2F;src&#x2F;</td>
+</tr>
+</tbody></table>
+<h1 id="1-2-Linux环境变量"><a href="#1-2-Linux环境变量" class="headerlink" title="1.2 Linux环境变量"></a>1.2 Linux环境变量</h1><table>
+<thead>
+<tr>
+<th>echo &#x2F;echo $…..</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>printenv  &#x2F; printenv ｜ grep ….</td>
+<td>打印环境变量的信息&#x2F;过滤</td>
+</tr>
+<tr>
+<td><strong>ros2 run</strong> 功能包名 可执行文件名</td>
+<td>执行文件</td>
+</tr>
+<tr>
+<td><strong>AMENT_PREFIX_PAT</strong>H&#x3D;&#x2F;opt&#x2F;ros&#x2F;jazzy</td>
+<td><strong>执行过程为</strong>： 1.找到AMENT_PREFIX_PATH目录    2.目录下的lib&#x2F;功能包名&#x2F;可执行文件名</td>
+</tr>
+<tr>
+<td><strong>export</strong> AMENT_PREFIX_PATH&#x3D;</td>
+<td>修改环境变量</td>
+</tr>
+<tr>
+<td>～&#x2F;.bashrc</td>
+<td>默认脚本（以点开头的是隐藏文件 ls -a 显示隐藏文件）</td>
+</tr>
+</tbody></table>
+<h1 id="2-1-ROS节点"><a href="#2-1-ROS节点" class="headerlink" title="2.1 ROS节点"></a>2.1 ROS节点</h1><table>
+<thead>
+<tr>
+<th>进入所在文件夹            code .&#x2F;</th>
+<th>用vscode打开所在文件夹</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ros2 node</strong> list</td>
+<td>查看节点列表</td>
+</tr>
+<tr>
+<td>export RCUTILS_CONSOLE_OUTPUT_FORMAT&#x3D;<br/>[{function_name}:{line_number}]:{message}</td>
+<td>修改打印出来的</td>
+</tr>
+</tbody></table>
+<h2 id="2-1-1功能包组织Python节点"><a href="#2-1-1功能包组织Python节点" class="headerlink" title="2.1.1功能包组织Python节点"></a>2.1.1功能包组织Python节点</h2><table>
+<thead>
+<tr>
+<th>1.ros2 pkg create ‘…..’(ros2 pkg create  –help)<br/>如 ：ros2 pkg create –build-type ament_python –license Apache-2.0 demo_python_pkg</th>
+<th>创建功能包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.Setup.py中的entry_points，<br>‘python_node &#x3D; demo_python_pkg.python_node:main’ <strong>(节点名 &#x3D; 节点文件夹名.节点名：函数名)</strong><br/>      1.1  python_node会生成inatall&#x2F;lib下面的可执行文件名<br>2.<strong>colcon build</strong> 之后出现三个文件夹 原本pkg的文件会拷贝一份到install中的 python&#x2F;site-packages下面<br/>      2.1运行时也是运行这install中的 python&#x2F;site-packages下面的复制文件</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>1.输入命令 source install&#x2F;setup.bash<br>2.查看环境变量  printenv | grep PYTHON</strong><br/>3.运行检查 ros2 run pkg文件名  node名</td>
+<td>自动修改更改环境变量（只对当前终端有效）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="/img/ros/1/image-20250512171048613.png" alt="image-20250512171048613"></p>
+<p>目录包的作用：<br><img src="/img/ros/1/image-20250512171503843.png" alt="image-20250512171503843"></p>
+<p>demo_python_pkg:与上层目录名保持一致，用于放置节点代码，开发主战场，init是标识文件，init出现说明该文件是python包</p>
+<p>resource：放置资源，无需关系</p>
+<p>test：测试文件</p>
+<p>license：证书文件</p>
+<p>package：功能包清单文件，依赖</p>
+<p>setup.cfg:python包的配置选项</p>
+<p>setup.py:入口声明</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">运行流程</span><br><span class="line">1.在setup.py 加入person_node = demo_python_pkg.person_node:main&#x27;</span><br><span class="line">2.构建包 colcon build</span><br><span class="line">3.改变环境变量 source install/setup.bash</span><br><span class="line">4.运行 ros2 run 功能包名字 可执行文件</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="2-2-多功能包的最佳实践WorkSpace"><a href="#2-2-多功能包的最佳实践WorkSpace" class="headerlink" title="2.2 多功能包的最佳实践WorkSpace"></a>2.2 多功能包的最佳实践WorkSpace</h2><p>  工作包创建流程：</p>
+<p>  1.创建工作区 topic_ws&#x2F;src</p>
+<p>  2.创建功能包  ros2 pkg create demo_python_topic  –build-type ament_python –dependencies rclpy example_interfaces –license Apache-2.0</p>
+<p>  3.colcon build 构建</p>
+<p>  4.在setup.bash中console.script 配置main函数</p>
+<p>  5.source install&#x2F;setup.bash</p>
+<p>  6.ros2 run 运行</p>
+<h2 id="2-3-python的继承以及多线程"><a href="#2-3-python的继承以及多线程" class="headerlink" title="2.3 python的继承以及多线程"></a>2.3 python的继承以及多线程</h2><p>事例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> rclpy</span><br><span class="line"><span class="keyword">from</span> rclpy.node <span class="keyword">import</span> Node</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">personNode</span>(<span class="title class_ inherited__">Node</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,node_name:<span class="built_in">str</span>,name_value:<span class="built_in">str</span>,age_value:<span class="built_in">int</span></span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(node_name)</span><br><span class="line">        self.name = name_value</span><br><span class="line">        self.age = age_value</span><br><span class="line">        self.get_logger().info(<span class="string">&#x27;111111111&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;personNodeClass has been used&quot;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self,food_value:<span class="built_in">str</span></span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span>,<span class="subst">&#123;self.age&#125;</span>yaer,eat<span class="subst">&#123;food_value&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    rclpy.init()</span><br><span class="line">    node = personNode(<span class="string">&#x27;zhangsan&#x27;</span>,<span class="string">&#x27;petter&#x27;</span>,<span class="number">18</span>)</span><br><span class="line">    node.eat(<span class="string">&#x27;sanmingzhi&#x27;</span>)</span><br><span class="line">    rclpy.spin(node)</span><br><span class="line">    rclpy.shutdown()</span><br></pre></td></tr></table></figure>
+
+<p>多线程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading </span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Download</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">download</span>(<span class="params">self,url,callback_world_count</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;threading.get_ident()&#125;</span>start:<span class="subst">&#123;url&#125;</span>&#x27;</span>)</span><br><span class="line">        response=requests.get(url)</span><br><span class="line">        response.encoding = <span class="string">&#x27;utt-8&#x27;</span></span><br><span class="line">        callback_world_count(url,response.text)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">start_download</span>(<span class="params">self,url,callback_world_count</span>):</span><br><span class="line">        thread = threading.Thread(target=self.download,args=(url,callback_world_count))</span><br><span class="line">        thread.start()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">world_count</span>(<span class="params">url,result</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;url&#125;</span>:<span class="subst">&#123;<span class="built_in">len</span>(result)&#125;</span>-&gt;<span class="subst">&#123;result[:<span class="number">5</span>]&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    download = Download()</span><br><span class="line">    download.start_download(<span class="string">&#x27;http://0.0.0.0:8000/novel.txt&#x27;</span>,world_count)</span><br><span class="line">    download.start_download(<span class="string">&#x27;http://0.0.0.0:8000/nove1.txt&#x27;</span>,world_count)</span><br><span class="line">    download.start_download(<span class="string">&#x27;http://0.0.0.0:8000/nove2.txt&#x27;</span>,world_count)</span><br></pre></td></tr></table></figure>
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>跟着鱼香ros学ros第一弹！</p><p><a href="https://zhniou.github.io/2025/09/20/ros/1.跟着鱼香ros学ros/">https://zhniou.github.io/2025/09/20/ros/1.跟着鱼香ros学ros/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>zhouxf</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-09-20</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-01-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/ros/">ros</a><a class="link-muted mr-2" rel="tag" href="/tags/python/">python</a><a class="link-muted mr-2" rel="tag" href="/tags/linux/">linux</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/09/27/ros/2.%E8%AF%9D%E9%A2%98/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">第二弹 话题topic！</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/04/01/sse/sse/"><span class="level-item">Server-Sent Events</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><script src="https://utteranc.es/client.js" repo="zhniou/blog-comment" issue-term="pathname" label="some-issue-label" theme="github-light" crossorigin="anonymous" async></script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><a href="/"><img class="avatar is-rounded" src="/img/avatar.JPG" alt="zhouxf"></a></figure><p class="title is-size-4 is-block" style="line-height:inherit;">zhouxf</p><p class="is-size-6 is-block">努力成为想要成为的人</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>china chongqing</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/zhniou" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/zhniou"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#1-1-Linux终端基础操作"><span class="level-left"><span class="level-item">1.1 Linux终端基础操作</span></span></a></li><li><a class="level is-mobile" href="#1-2-Linux环境变量"><span class="level-left"><span class="level-item">1.2 Linux环境变量</span></span></a></li><li><a class="level is-mobile" href="#2-1-ROS节点"><span class="level-left"><span class="level-item">2.1 ROS节点</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#2-1-1功能包组织Python节点"><span class="level-left"><span class="level-item">2.1.1功能包组织Python节点</span></span></a></li><li><a class="level is-mobile" href="#2-2-多功能包的最佳实践WorkSpace"><span class="level-left"><span class="level-item">2.2 多功能包的最佳实践WorkSpace</span></span></a></li><li><a class="level is-mobile" href="#2-3-python的继承以及多线程"><span class="level-left"><span class="level-item">2.3 python的继承以及多线程</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.svg" alt="zhniou" height="28"></a><p class="is-size-7"><span>&copy; 2026 zhouxf</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p><p class="is-size-7">© 2023</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zhniou"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
